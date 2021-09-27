@@ -38,10 +38,10 @@ public class Vector {
     public double getMax() {
         double max = vectors[0];
 
-        for (double el : vectors) {
-            if (el > max)
+        for (double num : vectors) {
+            if (num > max)
             {
-                max = el;
+                max = num;
             }
 
         }
