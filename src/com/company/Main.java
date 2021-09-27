@@ -32,6 +32,6 @@ public class Main {
 
         System.out.println("Сложение двух векторов: " + Arrays.toString(vector.sum(someVector)));
 
-        System.out.println("Скалярное произведение векторов: " + vector.scalarMultiple(someVector));
+        System.out.println("Скалярное произведение векторов: " + Arrays.toString(vector.scalarMultiple(someVector)));
     }
 }

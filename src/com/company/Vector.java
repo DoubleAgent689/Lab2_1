@@ -87,11 +87,11 @@ public class Vector {
         return (vectors);
     }
 
-    public String scalarMultiple(double[] vector) {
+    public double[] scalarMultiple(double[] vector) {
         for (var i = 0; i < vectors.length; ++i) {
             vectors[i] *= vector[i];
         }
-        return Arrays.toString(vectors);
+        return (vectors);
     }
 
 }
