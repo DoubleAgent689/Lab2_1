@@ -26,9 +26,9 @@ public class Vector {
     public double getMin() {
         double min = vectors[0];
 
-        for (double el : vectors) {
-            if (el < min) {
-                min = el;
+        for (double num : vectors) {
+            if (num < min) {
+                min = num;
             }
 
         }
