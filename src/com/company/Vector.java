@@ -3,30 +3,30 @@ import java.util.Arrays;
 
 public class Vector {
 
-    private double[] vects;
+    public double[] vectors;
 
     public Vector(int length) {
-        vects = new double[length];
+        vectors = new double[length];
     }
 
     public void setValue(int i, double value) {
-        vects[i] = value;
+        vectors[i] = value;
     }
 
     public String getValue() {
-        return Arrays.toString(vects);
+        return Arrays.toString(vectors);
     }
 
 
     public int getLength ()
     {
-        return vects.length;
+        return vectors.length;
     }
 
     public double getMin() {
-        double min = vects[0];
+        double min = vectors[0];
 
-        for (double el : vects) {
+        for (double el : vectors) {
             if (el < min) {
                 min = el;
             }
@@ -36,9 +36,9 @@ public class Vector {
     }
 
     public double getMax() {
-        double max = vects[0];
+        double max = vectors[0];
 
-        for (double el : vects) {
+        for (double el : vectors) {
             if (el > max)
             {
                 max = el;
@@ -49,15 +49,15 @@ public class Vector {
     }
 
     public void sort() {
-        for (int i = vects.length-1; i>0; i--)
+        for (int i = vectors.length-1; i>0; i--)
         {
             for (int j = 0; j<i; j++)
             {
-                if (vects[j] > vects[j+1])
+                if (vectors[j] > vectors[j+1])
                 {
-                    double tmp = vects[j];
-                    vects[j] = vects[j+1];
-                    vects[j+1] = tmp;
+                    double tmp = vectors[j];
+                    vectors[j] = vectors[j+1];
+                    vectors[j+1] = tmp;
                 }
             }
         }
@@ -65,7 +65,7 @@ public class Vector {
 
     public double evkNorm() {
         var result = 0;
-        for (var el : vects) {
+        for (var el : vectors) {
             result += el * el;
         }
         return Math.sqrt(result);
@@ -73,25 +73,25 @@ public class Vector {
 
     public String mult(int m) {
 
-        for (var i = 0; i < vects.length; ++i) {
-            vects[i] *= m;
+        for (var i = 0; i < vectors.length; ++i) {
+            vectors[i] *= m;
         }
 
-        return Arrays.toString(vects);
+        return Arrays.toString(vectors);
     }
 
     public String sum(double[] vector) {
-        for (var i = 0; i < vects.length; ++i) {
-            vects[i] += vector[i];
+        for (var i = 0; i < vectors.length; ++i) {
+            vectors[i] += vector[i];
         }
-        return Arrays.toString(vects);
+        return Arrays.toString(vectors);
     }
 
     public String scalarMult(double[] vector) {
-        for (var i = 0; i < vects.length; ++i) {
-            vects[i] *= vector[i];
+        for (var i = 0; i < vectors.length; ++i) {
+            vectors[i] *= vector[i];
         }
-        return Arrays.toString(vects);
+        return Arrays.toString(vectors);
     }
 
 }
