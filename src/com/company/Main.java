@@ -15,7 +15,7 @@ public class Main {
             vector.setValue(i, scanner.nextDouble());
         }
 
-        System.out.println(vector.getValue());
+        System.out.println(Arrays.toString(vector.getValue()));
 
         System.out.println( "Длина вектора:" + vector.getLength());
 
