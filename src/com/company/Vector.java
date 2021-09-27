@@ -3,32 +3,40 @@ import java.util.Arrays;
 
 public class Vector {
 
-    public double[] vectors;
+    private double[] vects;
 
-    public Vector(int length) {
-        vectors = new double[length];
-    }
+    public Vector(int length) {vects = new double[length];}
 
     public void setValue(int i, double value) {
-        vectors[i] = value;
+        vects[i] = value;
+    }
+
+    public void setVectorValue (double[] vector) {
+
+        for (var j = 0; j < vects.length; ++j)
+        {
+
+            vects[j] =  vector[j];
+        }
+
     }
 
     public double[] getValue() {
-        return (vectors);
+        return vects;
     }
 
 
     public int getLength ()
     {
-        return vectors.length;
+        return vects.length;
     }
 
     public double getMin() {
-        double min = vectors[0];
+        double min = vects[0];
 
-        for (double num : vectors) {
-            if (num < min) {
-                min = num;
+        for (double el : vects) {
+            if (el < min) {
+                min = el;
             }
 
         }
@@ -36,12 +44,12 @@ public class Vector {
     }
 
     public double getMax() {
-        double max = vectors[0];
+        double max = vects[0];
 
-        for (double num : vectors) {
-            if (num > max)
+        for (double el : vects) {
+            if (el > max )
             {
-                max = num;
+                max = el;
             }
 
         }
@@ -49,49 +57,72 @@ public class Vector {
     }
 
     public void sort() {
-        for (int i = vectors.length-1; i>0; i--)
+        for (int i = vects.length-1; i>0; i--)
         {
             for (int j = 0; j<i; j++)
             {
-                if (vectors[j] > vectors[j+1])
+                if (vects[j] > vects[j+1])
                 {
-                    double tmp = vectors[j];
-                    vectors[j] = vectors[j+1];
-                    vectors[j+1] = tmp;
+                    double tmp = vects[j];
+                    vects[j] = vects[j+1];
+                    vects[j+1] = tmp;
+
                 }
             }
         }
     }
 
-    public double EvkNorm() {
+    public double evkNorm() {
         var result = 0;
-        for (var num : vectors) {
-            result += num * num;
+        for (var el : vects) {
+            result += el * el;
         }
         return Math.sqrt(result);
     }
 
-    public double[] multiple(int m) {
+    public Vector mult(int m) {
 
-        for (var i = 0; i < vectors.length; ++i) {
-            vectors[i] *= m;
+
+        double[] array = new double[vects.length];
+        Vector result = new Vector(vects.length);
+
+
+        for (var i = 0; i < vects.length; ++i) {
+            array[i] = vects[i] * m;
         }
-
-        return (vectors);
+        result.setVectorValue(array);
+        return result;
     }
+
+    @Override
+    public String toString() {
+        return Arrays.toString(vects);
+    }
+
+
 
     public double[] sum(double[] vector) {
-        for (var i = 0; i < vectors.length; ++i) {
-            vectors[i] += vector[i];
+        double[] array = new double[vects.length];
+        Vector result = new Vector(vects.length);
+
+
+        for (var i = 0; i < vects.length; ++i) {
+            array[i] = vects[i] + vector[i];
         }
-        return (vectors);
+        result.setVectorValue(array);
+        return array;
     }
 
-    public double[] scalarMultiple(double[] vector) {
-        for (var i = 0; i < vectors.length; ++i) {
-            vectors[i] *= vector[i];
+    public Vector scalarMult(double[] vector) {
+        double[] array = new double[vects.length];
+        Vector result = new Vector(vects.length);
+
+
+        for (var i = 0; i < vects.length; ++i) {
+            array[i] = vects[i] *= vector[i];
         }
-        return (vectors);
+        result.setVectorValue(array);
+        return result;
     }
 
 }

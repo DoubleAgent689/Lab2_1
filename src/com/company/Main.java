@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class Main {
 
+
+
     public static void main(String[] args)  {
         Scanner scanner = new Scanner(System.in);
         double[] someVector = {1.45, 3.56, 2.65, 1.56, 2.12};
@@ -19,19 +21,25 @@ public class Main {
 
         System.out.println( "Длина вектора:" + vector.getLength());
 
-        System.out.println("Минимальное значение массива: " + vector.getMin());
-        System.out.println("Максимальное значение массива: " + vector.getMax());
+        System.out.println("Минимальный: " + vector.getMin());
+        System.out.println("Максимальный: " + vector.getMax());
 
         vector.sort();
         System.out.println("Массив после сортировки: " + Arrays.toString(vector.getValue()));
 
-        System.out.println("Евклидова норма: " + vector.EvkNorm());
+        System.out.println("Евклидова норма: " + vector.evkNorm());
 
-        System.out.println("Умножение вектора на число" + Arrays.toString(vector.multiple(2)));
-        System.out.println("Умножение вектора на число" + Arrays.toString(vector.multiple(2)));
+
+        System.out.println("Умножение вектора на число" + vector.mult(2));
+        System.out.println("Умножение вектора на число" + vector.mult(2));
+
 
         System.out.println("Сложение двух векторов: " + Arrays.toString(vector.sum(someVector)));
 
-        System.out.println("Скалярное произведение векторов: " + Arrays.toString(vector.scalarMultiple(someVector)));
+        System.out.println("Скалярное произв. векторов: " + vector.scalarMult(someVector));
+
+
+
+
     }
 }
