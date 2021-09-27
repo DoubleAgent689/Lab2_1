@@ -24,7 +24,7 @@ public class Main {
         vector.sort();
         System.out.println("Массив после сортировки: " + vector.getValue());
 
-        System.out.println("Евклидова норма: " + vector.EuclideanNorm());
+        System.out.println("Евклидова норма: " + vector.EvkNorm());
 
         System.out.println("Умножение вектора на число" + vector.multiple(2));
 

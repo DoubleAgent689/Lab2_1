@@ -63,7 +63,7 @@ public class Vector {
         }
     }
 
-    public double EuclideanNorm() {
+    public double EvkNorm() {
         var result = 0;
         for (var num : vectors) {
             result += num * num;
