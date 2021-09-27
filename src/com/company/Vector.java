@@ -13,8 +13,8 @@ public class Vector {
         vectors[i] = value;
     }
 
-    public String getValue() {
-        return Arrays.toString(vectors);
+    public double[] getValue() {
+        return (vectors);
     }
 
 

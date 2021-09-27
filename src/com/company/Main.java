@@ -23,14 +23,14 @@ public class Main {
         System.out.println("Максимальное значение массива: " + vector.getMax());
 
         vector.sort();
-        System.out.println("Массив после сортировки: " + vector.getValue());
+        System.out.println("Массив после сортировки: " + Arrays.toString(vector.getValue()));
 
         System.out.println("Евклидова норма: " + vector.EvkNorm());
 
         System.out.println("Умножение вектора на число" + Arrays.toString(vector.multiple(2)));
         System.out.println("Умножение вектора на число" + Arrays.toString(vector.multiple(2)));
 
-        System.out.println("Сложение двух векторов: " + vector.sum(someVector));
+        System.out.println("Сложение двух векторов: " + Arrays.toString(vector.sum(someVector)));
 
         System.out.println("Скалярное произведение векторов: " + vector.scalarMultiple(someVector));
     }
