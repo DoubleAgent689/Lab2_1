@@ -65,8 +65,8 @@ public class Vector {
 
     public double evkNorm() {
         var result = 0;
-        for (var el : vectors) {
-            result += el * el;
+        for (var num : vectors) {
+            result += num * num;
         }
         return Math.sqrt(result);
     }
