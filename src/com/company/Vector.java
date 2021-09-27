@@ -71,20 +71,20 @@ public class Vector {
         return Math.sqrt(result);
     }
 
-    public String multiple(int m) {
+    public double[] multiple(int m) {
 
         for (var i = 0; i < vectors.length; ++i) {
             vectors[i] *= m;
         }
 
-        return Arrays.toString(vectors);
+        return (vectors);
     }
 
-    public String sum(double[] vector) {
+    public double[] sum(double[] vector) {
         for (var i = 0; i < vectors.length; ++i) {
             vectors[i] += vector[i];
         }
-        return Arrays.toString(vectors);
+        return (vectors);
     }
 
     public String scalarMultiple(double[] vector) {

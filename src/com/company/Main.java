@@ -1,4 +1,5 @@
 package com.company;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -26,7 +27,8 @@ public class Main {
 
         System.out.println("Евклидова норма: " + vector.EvkNorm());
 
-        System.out.println("Умножение вектора на число" + vector.multiple(2));
+        System.out.println("Умножение вектора на число" + Arrays.toString(vector.multiple(2)));
+        System.out.println("Умножение вектора на число" + Arrays.toString(vector.multiple(2)));
 
         System.out.println("Сложение двух векторов: " + vector.sum(someVector));
 
