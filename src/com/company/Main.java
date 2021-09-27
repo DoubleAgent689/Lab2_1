@@ -24,12 +24,12 @@ public class Main {
         vector.sort();
         System.out.println("Массив после сортировки: " + vector.getValue());
 
-        System.out.println("Евклидова норма: " + vector.evkNorm());
+        System.out.println("Евклидова норма: " + vector.EuclideanNorm());
 
-        System.out.println("Умножение вектора на число" + vector.mult(2));
+        System.out.println("Умножение вектора на число" + vector.multiple(2));
 
         System.out.println("Сложение двух векторов: " + vector.sum(someVector));
 
-        System.out.println("Скалярное произведение векторов: " + vector.scalarMult(someVector));
+        System.out.println("Скалярное произведение векторов: " + vector.scalarMultiple(someVector));
     }
 }

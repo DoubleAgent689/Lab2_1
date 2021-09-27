@@ -63,7 +63,7 @@ public class Vector {
         }
     }
 
-    public double evkNorm() {
+    public double EuclideanNorm() {
         var result = 0;
         for (var num : vectors) {
             result += num * num;
@@ -71,7 +71,7 @@ public class Vector {
         return Math.sqrt(result);
     }
 
-    public String mult(int m) {
+    public String multiple(int m) {
 
         for (var i = 0; i < vectors.length; ++i) {
             vectors[i] *= m;
@@ -87,7 +87,7 @@ public class Vector {
         return Arrays.toString(vectors);
     }
 
-    public String scalarMult(double[] vector) {
+    public String scalarMultiple(double[] vector) {
         for (var i = 0; i < vectors.length; ++i) {
             vectors[i] *= vector[i];
         }
